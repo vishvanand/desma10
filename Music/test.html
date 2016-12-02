@@ -1,0 +1,41 @@
+<html>
+<body>
+<button onclick="play();">Play</button>
+<script src="SeamlessLoop.js"></script>
+<script src="BinFileReader.js"></script>
+<script>
+/*
+var file = new BinFileReader("WarTrail.mp3");
+console.log('yay');
+var fileContent = file.readString(file.getFileSize());
+var encoder = new BASE64UTF8();
+var base64 = encoder.base64_encode(fileContent);
+var mime = "audio/mp3";
+var uri = "data:" + mime + ";base64," + base64;
+console.log(uri);
+var length = 10000;
+
+function play() {
+	var loop = new SeamlessLoop();
+	loop.callback(soundsLoaded);
+	loop.addUri(uri, length, "sound1");
+}
+
+function soundsLoaded() {
+    loop.start("sound1");
+}
+*/
+
+function play() {
+	var myAudio = new Audio('WarTrailClipped.mp3');
+	myAudio.currentTime = 110;
+	myAudio.loop = true;
+	/*myAudio.addEventListener('ended', function() {
+		this.currentTime = 0;
+		this.play();
+	}, false);*/
+	myAudio.play();
+}
+</script>
+</body>
+</html>

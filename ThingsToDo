@@ -1,0 +1,14 @@
+List of things to do:
+
+*Place Objects on World
+*Place foxes on world
+Fix the fucking movement
+Place sparkly thingy on world following foxy dude
+*Make Sword Animation on Button Press
+*Bounding Sphere on Mountain
+*Bounding Spheres on tombstones
+*Implement game mechanism (Hit -> lose health, attack, get attacked, health bar)
+Implement CS32 AI mechanism
+
+Implement Orthographic Projection
+Implement Phong/Gourand shading
