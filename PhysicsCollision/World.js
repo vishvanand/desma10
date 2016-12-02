@@ -41,7 +41,6 @@ var proto = {
 
 					{
 						dominate(this.planetObjects[i].num);
-						console.log(this.planetObjects[i].num); 
 						//return false;
 					}
 

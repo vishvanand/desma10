@@ -139,7 +139,6 @@ function ret4by4(str)
 	var newmatrix = [];
 	var mat = converter(str);
 
-	console.log(mat);
 	for(var i=0;i<mat.length/4;i++)
 	{
 		newmatrix.push([mat[4*i],mat[4*i+1],mat[4*i+2],mat[4*i+3]]);
@@ -221,7 +220,6 @@ function dominate(num,refresh)
 	minecrystalmesh[num-1].ambient = vec4(150/256,123/256,183/256,1);
 	minecrystalmesh[num-1].diffuse = vec4(150/256,123/256,183/256,1);
 
-	console.log(minecrystalmesh);
 	if(!refresh)
 	dominated.push(num);
 
@@ -652,8 +650,6 @@ window.onload = function init()
 		homeObjects.push(new Coloredobject(homeVertices, homeNormals, pos_2, vec4(0, 0, 0, 1), vec4(0,0.6105263,0.5430956,1), vec4(0,0,0, 1), 0, "home2"));
 		homeObjects.push(new Coloredobject(homeVertices, homeNormals, pos_3, vec4(0, 0, 0, 1), vec4(0.2054005,0.2053091,0.64,1), vec4(0,0,0, 1), 0, "home3"));
 
-		console.log(mineCartesia1);
-
 
 		var mine1Obj = createWorldObj(mineObjects1,"mineobjects1");
 		var homeObj = createWorldObj(homeObjects,"homeobjects");
@@ -677,8 +673,6 @@ window.onload = function init()
 		 //mineCartesia12.addChild(arr2);
 		});
 
-		console.log(mineCartesia1.children[0].mesh.ambient);
-		console.log(mineCartesia1.children[0].mesh.diffuse);
 
 		return mineCartesia1.children[0].mesh;
 	}
@@ -1272,7 +1266,7 @@ window.onload = function init()
 	// moveForward will move in the direction the object is facing (based on rotation matrix only)
 	document.body.onkeydown = function (e) {
 		switch(e.keyCode) {
-			case 32: startscreen = !startscreen; if(!startscreen)startGameCam(); forcescreenctr = 1; console.log("spc"); break;
+			case 32: startscreen = !startscreen; if(!startscreen)startGameCam(); forcescreenctr = 1; break;
 			case 37: dude.turn(10); break; //left key: Move dude left
 			case 39: dude.turn(-10); break; //right key: Move dude right
 			case 38: dude.moveInDirection(vec3(0,0,-0.05)); break; //up key: move dude up
